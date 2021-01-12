@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainpage_fragment">
+
+    <fragment
+        android:id="@+id/mainpage_fragment"
+        android:name="com.example.beautymaster.fragments.MainPageFragment"
+        android:label="Головна"
+        tools:layout="@layout/fragment_main_page" />
+    <fragment
+        android:id="@+id/portfolio_fragment"
+        android:name="com.example.beautymaster.fragments.PortfolioFragment"
+        android:label="Портфоліо"
+        tools:layout="@layout/fragment_portfolio" />
+    <fragment
+        android:id="@+id/services_fragment"
+        android:name="com.example.beautymaster.fragments.ServicesFragment"
+        android:label="Послуги"
+        tools:layout="@layout/fragment_services" />
+</navigation>
