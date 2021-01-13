@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
-        app:itemBackground="@color/design_default_color_primary"
+        app:itemBackground="@color/pink"
         app:itemTextColor="@color/design_default_color_on_primary"
         app:menu="@menu/bot_nav_menu"/>
 </RelativeLayout>
