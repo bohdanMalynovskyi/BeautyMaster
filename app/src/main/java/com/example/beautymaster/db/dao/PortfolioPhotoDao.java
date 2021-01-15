@@ -16,4 +16,8 @@ public interface PortfolioPhotoDao {
 
     @Insert
     void insert(PortfolioPhoto portfolioPhoto);
+
+    @Insert
+    void insertAll(List<PortfolioPhoto> portfolioPhotos);
+
 }

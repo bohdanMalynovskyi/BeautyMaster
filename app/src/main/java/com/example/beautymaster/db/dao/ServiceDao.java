@@ -17,4 +17,7 @@ public interface ServiceDao {
     @Insert
     void insert(Service service);
 
+    @Insert
+    void insertAll(List<Service> services);
+
 }
