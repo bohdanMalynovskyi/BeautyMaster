@@ -1,4 +1,4 @@
-package com.example.beautymaster.fragments;
+package com.example.beautymaster.fragment;
 
 import android.os.Bundle;
 

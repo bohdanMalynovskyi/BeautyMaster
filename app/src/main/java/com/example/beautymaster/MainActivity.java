@@ -1,5 +1,6 @@
 package com.example.beautymaster;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        fillDB();
+
         BottomNavigationView botNavView = findViewById(R.id.botNavView);
 
         // Passing each menu ID as a set of Ids because each
@@ -44,10 +47,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(botNavView, navController);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        fillDB();
     }
 
+    @SuppressLint("CheckResult")
     private void fillDB() {
 
         List<Service> services = new ArrayList<>();
@@ -96,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
         portfolioPhotos.add(new PortfolioPhoto(
                 EYELASH_LAMINATION_NAME,
-                "https://user-images.githubusercontent.com/77198160/104621311-9fbe5200-5698-11eb-94a9-adbdf9d35298.JPG"
+                "https://user-images.githubusercontent.com/77198160/104621434-c8464c00-5698-11eb-9e1e-f01245c1de6a.JPG"
         ));
 
         portfolioPhotos.add(new PortfolioPhoto(
@@ -115,6 +117,8 @@ public class MainActivity extends AppCompatActivity {
         ));
 
         Completable.fromAction(() -> {
+            App.getInstance().getDatabase().clearAllTables();
+
             AppDatabase db = App.getInstance().getDatabase();
             ServiceDao serviceDao = db.serviceDao();
             PortfolioPhotoDao portfolioPhotoDao = db.portfolioPhotoDao();

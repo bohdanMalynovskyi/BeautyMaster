@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/mainpage_fragment"
-        android:name="com.example.beautymaster.fragments.MainPageFragment"
+        android:name="com.example.beautymaster.fragment.MainPageFragment"
         android:label="Головна"
         tools:layout="@layout/fragment_main_page" />
     <fragment
         android:id="@+id/portfolio_fragment"
-        android:name="com.example.beautymaster.fragments.PortfolioFragment"
+        android:name="com.example.beautymaster.fragment.PortfolioFragment"
         android:label="Портфоліо"
         tools:layout="@layout/fragment_portfolio" />
     <fragment
         android:id="@+id/services_fragment"
-        android:name="com.example.beautymaster.fragments.ServicesFragment"
+        android:name="com.example.beautymaster.fragment.ServicesFragment"
         android:label="Послуги"
         tools:layout="@layout/fragment_services" />
 </navigation>

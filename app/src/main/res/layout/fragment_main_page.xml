@@ -5,7 +5,7 @@
     style="@style/GeneralStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fragments.MainPageFragment">
+    tools:context="fragment.MainPageFragment">
 
     <ImageView
         android:id="@+id/ivMainPagePhoto"
@@ -21,6 +21,7 @@
         app:layout_constraintVertical_bias="0.247" />
 
     <TextView
+        style="@style/TextStyle"
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,6 +33,7 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <TextView
+        style="@style/TextStyle"
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

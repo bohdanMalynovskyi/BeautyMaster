@@ -8,11 +8,13 @@ import com.example.beautymaster.models.PortfolioPhoto;
 
 import java.util.List;
 
+import io.reactivex.Single;
+
 @Dao
 public interface PortfolioPhotoDao {
 
     @Query("SELECT * FROM PortfolioPhoto")
-    List<PortfolioPhoto> getAll();
+    Single<List<PortfolioPhoto>> getAll();
 
     @Insert
     void insert(PortfolioPhoto portfolioPhoto);
