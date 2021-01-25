@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.beautymaster.R;
@@ -17,11 +16,9 @@ import java.util.List;
 
 public class PortfolioPhotoAdapter extends RecyclerView.Adapter<PortfolioPhotoHolder> {
     List<PortfolioPhoto> portfolioPhotos;
-    FragmentActivity fragmentActivity;
 
-    public PortfolioPhotoAdapter(List<PortfolioPhoto> portfolioPhotoList, FragmentActivity fragmentActivity) {
+    public PortfolioPhotoAdapter(List<PortfolioPhoto> portfolioPhotoList) {
         this.portfolioPhotos = portfolioPhotoList;
-        this.fragmentActivity = fragmentActivity;
     }
 
     @NonNull

@@ -8,11 +8,13 @@ import com.example.beautymaster.models.Service;
 
 import java.util.List;
 
+import io.reactivex.Single;
+
 @Dao
 public interface ServiceDao {
 
     @Query("SELECT * FROM service")
-    List<Service> getAll();
+    Single<List<Service>> getAll();
 
     @Insert
     void insert(Service service);

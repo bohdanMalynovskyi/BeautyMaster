@@ -37,6 +37,6 @@ public class PortfolioFragment extends Fragment {
         App.getInstance().getDatabase().portfolioPhotoDao().getAll()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(portfolioPhotos -> portfolioPhotoList.setAdapter(new PortfolioPhotoAdapter(portfolioPhotos, getActivity())));
+                .subscribe(portfolioPhotos -> portfolioPhotoList.setAdapter(new PortfolioPhotoAdapter(portfolioPhotos)));
     }
 }

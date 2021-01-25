@@ -13,4 +13,11 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="appointmentBtn">Записатися</string>
+    <string name="procedureAppointment">Запис на процедуру</string>
+    <string name="clientName">Ім\'я</string>
+    <string name="phoneNumberHint">Номер телефону</string>
+    <string name="emailHint">E-mail</string>
+    <string name="dateTimeHint">Бажана дата та час</string>
+    <string name="commentHint">Коментар</string>
 </resources>

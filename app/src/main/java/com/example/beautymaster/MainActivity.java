@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String EYELASH_LAMINATION_NAME = "Ламінування вій";
     private static final String EYELASH_EXTENSION_NAME = "Нарощування вій";
 
+    public NavController navController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.mainpage_fragment, R.id.portfolio_fragment, R.id.services_fragment)
                 .build();
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(botNavView, navController);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
     }
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         services.add(new Service(
                 EYELASH_LAMINATION_NAME,
-                "Eyelash lamination description"
+                "Eyelash lamination descriptionEyelash lamination descriptionEyelash lamination descriptionEyelash lamination descriptionEyelash lamination description"
         ));
 
         services.add(new Service(
