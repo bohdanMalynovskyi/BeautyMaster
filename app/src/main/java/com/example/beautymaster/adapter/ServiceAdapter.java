@@ -1,12 +1,15 @@
 package com.example.beautymaster.adapter;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.beautymaster.MainActivity;
 import com.example.beautymaster.R;
 import com.example.beautymaster.holder.ServiceHolder;
 import com.example.beautymaster.models.Service;
@@ -15,10 +18,14 @@ import java.util.List;
 
 public class ServiceAdapter extends RecyclerView.Adapter<ServiceHolder> {
 
-    List<Service> serviceList;
+    private static final String PROCEDURE_NAME = "PROCEDURE_NAME";
 
-    public ServiceAdapter(List<Service> serviceList) {
+    List<Service> serviceList;
+    FragmentActivity activity;
+
+    public ServiceAdapter(List<Service> serviceList, FragmentActivity activity) {
         this.serviceList = serviceList;
+        this.activity = activity;
     }
 
     @NonNull
@@ -31,8 +38,14 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceHolder> {
     @Override
     public void onBindViewHolder(@NonNull ServiceHolder holder, int position) {
         Service service = serviceList.get(position);
+
         holder.getTvServiceName().setText(service.getName());
         holder.getTvServiceDescription().setText(service.getDescription());
+        holder.getAppointmentBtn().setOnClickListener(l -> {
+            Bundle bundle = new Bundle();
+            bundle.putString(PROCEDURE_NAME, service.getName());
+            ((MainActivity) activity).navController.navigate(R.id.appointment_fragment, bundle);
+        });
     }
 
     @Override

@@ -25,9 +25,9 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String EYEBROW_MODELING_NAME = "Моделювання брів";
-    private static final String EYELASH_LAMINATION_NAME = "Ламінування вій";
-    private static final String EYELASH_EXTENSION_NAME = "Нарощування вій";
+    private static final String EYEBROW_MODELING_NAME = "МОДЕЛЮВАННЯ БРІВ";
+    private static final String EYELASH_LAMINATION_NAME = "ЛАМІНУВАННЯ ВІЙ";
+    private static final String EYELASH_EXTENSION_NAME = "НАРОЩУВАННЯ ВІЙ";
 
     public NavController navController;
 
@@ -59,17 +59,17 @@ public class MainActivity extends AppCompatActivity {
 
         services.add(new Service(
                 EYEBROW_MODELING_NAME,
-                "Modeling desc"
+                getString(R.string.eyebrow_modeling_description_text)
         ));
 
         services.add(new Service(
                 EYELASH_LAMINATION_NAME,
-                "Eyelash lamination descriptionEyelash lamination descriptionEyelash lamination descriptionEyelash lamination descriptionEyelash lamination description"
+                getString(R.string.eyelash_lamination_description_text)
         ));
 
         services.add(new Service(
                 EYELASH_EXTENSION_NAME,
-                "Eyel desc"
+                getString(R.string.eyelash_extension_description_text)
         ));
 
 

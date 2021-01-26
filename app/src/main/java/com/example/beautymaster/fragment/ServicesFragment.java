@@ -37,6 +37,6 @@ public class ServicesFragment extends Fragment {
         App.getInstance().getDatabase().serviceDao().getAll()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(services -> servicesRecyclerList.setAdapter(new ServiceAdapter(services)));
+                .subscribe(services -> servicesRecyclerList.setAdapter(new ServiceAdapter(services, getActivity())));
     }
 }

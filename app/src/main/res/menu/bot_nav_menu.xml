@@ -3,14 +3,17 @@
 
     <item
         android:id="@+id/mainpage_fragment"
+        android:icon="@drawable/ic_main_page"
         android:title="Головна" />
 
     <item
         android:id="@+id/portfolio_fragment"
+        android:icon="@drawable/ic_portfolio"
         android:title="Портфоліо" />
 
     <item
         android:id="@+id/services_fragment"
+        android:icon="@drawable/ic_service"
         android:title="Послуги" />
 
 </menu>

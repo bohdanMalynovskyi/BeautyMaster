@@ -20,4 +20,9 @@
         android:name="com.example.beautymaster.fragment.ServicesFragment"
         android:label="Послуги"
         tools:layout="@layout/fragment_services" />
+    <fragment
+        android:id="@+id/appointment_fragment"
+        android:name="com.example.beautymaster.fragment.AppointmentFragment"
+        android:label="Запис"
+        tools:layout="@layout/fragment_appointment" />
 </navigation>
